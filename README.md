@@ -6,6 +6,7 @@ Feature:
 1. Search arsip by NIP
 2. Display data utama
 3. Verifikasi berkas
+4. Interkoneksi dengan aplikasi DMS
 
 Requirement:
 1. PHP 5
