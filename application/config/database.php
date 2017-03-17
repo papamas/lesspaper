@@ -83,8 +83,13 @@ $db['mirror']['stricton'] = FALSE;
 
 /*openkm*/
 $db['openkm']['hostname'] = 'localhost';
+<<<<<<< HEAD
 $db['openkm']['username'] = 'username';
 $db['openkm']['password'] = 'password';
+=======
+$db['openkm']['username'] = 'root';
+$db['openkm']['password'] = '';
+>>>>>>> 13e201560a0b204f046fe9e9c69e81e44aaf0776
 $db['openkm']['database'] = 'okmdb';
 $db['openkm']['dbdriver'] = 'mysql';
 $db['openkm']['dbprefix'] = '';
