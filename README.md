@@ -4,8 +4,8 @@ Aplikasi verrifikasi berkas  secara less paper pada proses pengurusan kenaikan p
 
 Feature:
 1. Search arsip by NIP
-2. Display data utama
-3. Verifikasi berkas
+2. Display data utama PNS
+3. Verifikasi berkas secara less paper
 4. Interkoneksi dengan aplikasi DMS
 
 Requirement:
@@ -16,5 +16,5 @@ Requirement:
 5. Database Takah
 
 Thanks to :
-1. Codeigniter
-2. Twitter Boostrap
+1. Codeigniter  https://codeigniter.com/
+2. Twitter Boostrap  http://getbootstrap.com/
