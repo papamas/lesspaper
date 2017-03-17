@@ -49,8 +49,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'username';
-$db['default']['password'] = 'password';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
 $db['default']['database'] = 'takahpns';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
@@ -66,8 +66,8 @@ $db['default']['stricton'] = FALSE;
 
 /*mirror*/
 $db['mirror']['hostname'] = 'localhost';
-$db['mirror']['username'] = 'username';
-$db['mirror']['password'] = 'password';
+$db['mirror']['username'] = 'root';
+$db['mirror']['password'] = '';
 $db['mirror']['database'] = 'mirror';
 $db['mirror']['dbdriver'] = 'mysql';
 $db['mirror']['dbprefix'] = '';
@@ -83,13 +83,8 @@ $db['mirror']['stricton'] = FALSE;
 
 /*openkm*/
 $db['openkm']['hostname'] = 'localhost';
-<<<<<<< HEAD
-$db['openkm']['username'] = 'username';
-$db['openkm']['password'] = 'password';
-=======
 $db['openkm']['username'] = 'root';
 $db['openkm']['password'] = '';
->>>>>>> 13e201560a0b204f046fe9e9c69e81e44aaf0776
 $db['openkm']['database'] = 'okmdb';
 $db['openkm']['dbdriver'] = 'mysql';
 $db['openkm']['dbprefix'] = '';
