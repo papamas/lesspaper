@@ -64,6 +64,7 @@ class dms extends MY_Controller {
 		$data['pendidikan'] = $this->_get_pendidikan($search);	
         $data['unor']		= $this->_get_unorpns($search);	
 		$data['kp']		    = $this->_getkp_info($search);	
+		$data['pengadaan']  = $this->_get_pengadaan_info($search);
 		$data['name']  		=  $this->auth->getName();
         $data['jabatan']    =  $this->auth->getJabatan();
 		$data['member']	    =  $this->auth->getCreated();
@@ -278,5 +279,28 @@ WHERE
 	    $r = $this->db1->query($sql);
 		
 		return $r;
+	}
+	
+	function _get_pengadaan_info($search)
+	{
+	    $sql ="SELECT a.*,DATE_FORMAT(a.TMT_CPNS,'%d-%m-%Y') CPNS,
+		DATE_FORMAT(a.PERSETUJUAN_TEKNIS_TANGGAL,'%d-%m-%Y') TANGGAL_TEKNIS,
+		DATE_FORMAT(a.DITETAPKAN_TANGGAL,'%d-%m-%Y') TANGGAL_PENETAPAN
+		FROM mirror.pupns_pengadaan_info  a WHERE a.NIP LIKE '$search' ";
+		$r = $this->db1->query($sql);
+		if($r->num_rows() > 0)
+		{
+			
+			$r = $r->row();
+		}
+		else
+		{
+			
+			$r = array();
+		}	
+		
+		return $r;
+		
+		
 	}
 }

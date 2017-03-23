@@ -74,7 +74,7 @@
 				<div class="form-group" style="display:inline;">
 				  <div class="input-group" style="display:table;">
 					<span class="input-group-addon" style="width:1%;"><span class="fa fa-search"></span></span>
-					<input class="form-control" pattern="[0-9]{18}" maxlength="18" required name="nip" placeholder="Masukan NIP..." autocomplete="off" autofocus="autofocus" type="text">
+					<input class="form-control" pattern="[0-9]{18}" maxlength="18" required name="nip" placeholder="Masukan NIP..." autocomplete="on" autofocus="autofocus" type="text">
 				  </div>
 				</div>
 			 </form>			
@@ -115,7 +115,8 @@
                 <ul class="nav nav-tabs">
 				  <li class="active"> <a href="#file-browser" data-toggle="tab">File Preview</a></li>
                   <li> <a href="#data-utama" data-toggle="tab">Data Utama</a></li>
-                  <li><a href="#pendidikan" data-toggle="tab">Pendidikan</a></li>
+                  <li> <a href="#pengadaan" data-toggle="tab">Penetapan NIP</a></li>                  
+				  <li><a href="#pendidikan" data-toggle="tab">Pendidikan</a></li>
                   <li><a href="#unor" data-toggle="tab">Posisi & Jabatan</a></li>
 				  <li><a href="#kp" data-toggle="tab">Kenaikan Pangkat</a></li>
                 </ul>
@@ -203,6 +204,30 @@
 					</div>
 					<?php }?>
                   </div><!-- /.tab-pane -->
+				  <div class="tab-pane" id="pengadaan">
+				    <?php if(count($pengadaan) > 0) {?>
+					<div class="box box-widget widget-user-2">
+					<div class="box-footer no-padding">								
+                      <ul class="nav nav-stacked">
+						<li><a href="#">Jabatan<span class="pull-right"><?php echo $pengadaan->JABATAN_NAMA?></span></a></li>						
+						<li><a href="#">Unit Kerja<span class="pull-right"><?php echo $pengadaan->UNIT_KERJA_NAMA?></span></a></li>						
+						<li><a href="#">Ijazah<span class="pull-right"><?php echo $pengadaan->IJASAH_NAMA?></span></a></li>
+						<li><a href="#">Tahun Ijazah<span class="pull-right"><?php echo $pengadaan->TAHUN_IJAZAH?></span></a></li>
+						<li><a href="#">TMT CPNS<span class="pull-right"><?php echo $pengadaan->CPNS?></span></a></li>
+						<li><a href="#">Persetujuan Teknis<span class="pull-right"><?php echo $pengadaan->PERSETUJUAN_TEKNIS_NOMOR?></span></a></li>
+					    <li><a href="#">Tanggal Teknis<span class="pull-right"><?php echo $pengadaan->TANGGAL_TEKNIS?></span></a></li>
+					    <li><a href="#">Tanggal Penetepan<span class="pull-right"><?php echo $pengadaan->TANGGAL_PENETAPAN?></span></a></li>
+					  </ul>
+					</div> 
+                    </div>					
+					<?php } else {?>
+					<div class="callout callout-warning">
+					  <h4>Warning!</h4>
+					  <p>Oops ! sory data not found.</p> <p>We could not find data you were looking for.</p>
+					 </div>
+					 <?php }?> 
+                  </div><!-- /.tab-pane -->
+				  
 
                   <div class="tab-pane" id="unor">
 				    <?php if(count($unor) > 0) {?>
